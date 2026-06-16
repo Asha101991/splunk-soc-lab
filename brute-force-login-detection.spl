@@ -1,0 +1,4 @@
+sourcetype=windows_auth EventCode=4625
+| stats count as failed_attempts by Account_Name, src_ip
+| where failed_attempts >= 5
+| sort - failed_attempts

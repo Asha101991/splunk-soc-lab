@@ -1,0 +1,1 @@
+Add screenshots of your Splunk searches, alerts, and dashboards in this folder.

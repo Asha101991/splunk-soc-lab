@@ -1,0 +1,9 @@
+2026-06-16 09:00:01 EventCode=4625 Account_Name=jdoe src_ip=192.168.1.50 Workstation_Name=WIN-01 Logon_Type=3 Status=Failed
+2026-06-16 09:00:15 EventCode=4625 Account_Name=jdoe src_ip=192.168.1.50 Workstation_Name=WIN-01 Logon_Type=3 Status=Failed
+2026-06-16 09:00:30 EventCode=4625 Account_Name=jdoe src_ip=192.168.1.50 Workstation_Name=WIN-01 Logon_Type=3 Status=Failed
+2026-06-16 09:00:45 EventCode=4625 Account_Name=jdoe src_ip=192.168.1.50 Workstation_Name=WIN-01 Logon_Type=3 Status=Failed
+2026-06-16 09:01:00 EventCode=4625 Account_Name=jdoe src_ip=192.168.1.50 Workstation_Name=WIN-01 Logon_Type=3 Status=Failed
+2026-06-16 09:02:10 EventCode=4624 Account_Name=jdoe src_ip=192.168.1.50 Workstation_Name=WIN-01 Logon_Type=3 Status=Success
+2026-06-16 10:15:22 EventCode=4624 Account_Name=Administrator src_ip=10.0.0.25 Workstation_Name=ADMIN-PC Logon_Type=10 Status=Success
+2026-06-16 11:20:33 EventCode=4625 Account_Name=asmith src_ip=203.0.113.10 Workstation_Name=UNKNOWN Logon_Type=3 Status=Failed
+2026-06-16 11:21:01 EventCode=4625 Account_Name=asmith src_ip=203.0.113.10 Workstation_Name=UNKNOWN Logon_Type=3 Status=Failed

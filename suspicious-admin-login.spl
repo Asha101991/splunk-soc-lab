@@ -1,0 +1,3 @@
+sourcetype=windows_auth EventCode=4624 Account_Name="Administrator"
+| table _time, Account_Name, src_ip, Workstation_Name, Logon_Type
+| sort - _time
