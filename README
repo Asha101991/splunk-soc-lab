@@ -1,0 +1,137 @@
+# Splunk SOC Lab
+
+A beginner-friendly Security Operations Center (SOC) lab built with Splunk to practice log analysis, threat detection, alerting, and incident response.
+
+## Project Overview
+
+This project demonstrates how to use Splunk as a SOC analyst to investigate security events, create detections, build dashboards, and document incidents.
+
+## Skills Practiced
+
+- Splunk Search Processing Language (SPL)
+- Log ingestion and parsing
+- Brute-force attack detection
+- Suspicious login investigation
+- Windows Event Log analysis
+- SOC alert triage
+- Dashboard creation
+- Incident response documentation
+
+## Lab Goals
+
+1. Install and configure Splunk Enterprise or Splunk Free.
+2. Upload sample security logs.
+3. Run SPL searches to identify suspicious activity.
+4. Create alerts for common SOC use cases.
+5. Build dashboards for monitoring.
+6. Write an incident report based on findings.
+
+## Project Structure
+
+```text
+splunk-soc-lab/
+├── dashboards/
+│   └── soc-dashboard.md
+├── detections/
+│   ├── brute-force-login-detection.spl
+│   ├── failed-logins-by-user.spl
+│   └── suspicious-admin-login.spl
+├── docs/
+│   ├── incident-report-template.md
+│   └── lab-walkthrough.md
+├── sample-logs/
+│   └── windows-auth-sample.log
+├── screenshots/
+│   └── add-your-screenshots-here.txt
+├── scripts/
+│   └── generate-sample-logs.py
+└── README.md
+```
+
+## Requirements
+
+- Splunk Enterprise Free Trial or Splunk Free
+- Basic knowledge of Windows Event IDs
+- GitHub account
+- Computer with at least 8 GB RAM recommended
+
+## Setup Instructions
+
+### 1. Install Splunk
+
+Download and install Splunk Enterprise from the official Splunk website.
+
+### 2. Start Splunk
+
+Open Splunk in your browser:
+
+```text
+http://localhost:8000
+```
+
+### 3. Upload Sample Logs
+
+Go to:
+
+```text
+Settings > Add Data > Upload
+```
+
+Upload:
+
+```text
+sample-logs/windows-auth-sample.log
+```
+
+Recommended settings:
+
+- Source type: `windows_auth`
+- Index: `main` or create a new index named `soc_lab`
+
+### 4. Run Detection Searches
+
+Open Splunk Search and Reporting and test the SPL files inside the `detections/` folder.
+
+Example:
+
+```spl
+sourcetype=windows_auth EventCode=4625
+| stats count by Account_Name, src_ip
+| where count >= 5
+| sort - count
+```
+
+## Example Detection Use Cases
+
+| Detection | Description |
+|---|---|
+| Brute-force login detection | Finds repeated failed login attempts |
+| Failed logins by user | Shows users with failed login activity |
+| Suspicious admin login | Finds administrator logins from unusual IPs |
+
+## Sample Incident Response Workflow
+
+1. Alert triggers in Splunk.
+2. SOC analyst reviews the search results.
+3. Analyst identifies affected username and source IP.
+4. Analyst checks whether login attempts succeeded.
+5. Analyst documents the incident.
+6. Analyst recommends remediation.
+
+## Screenshots to Add
+
+After running the lab, add screenshots of:
+
+- Uploaded logs
+- Search results
+- Alert configuration
+- Dashboard panels
+- Incident report
+
+## Resume Bullet Example
+
+Built a Splunk SOC lab to ingest authentication logs, detect brute-force login attempts using SPL, create dashboards, and document incident response findings.
+
+## Author
+
+Created by Ashaar Leacock-Thomas
